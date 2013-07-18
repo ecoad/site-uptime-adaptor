@@ -25,7 +25,9 @@ module.exports = function(grunt) {
         },
         spec: {
             options: {
-                reporter: 'spec'
+                reporter: 'spec',
+                timeout: '5000',
+                bail: true
             }
         }
     }
