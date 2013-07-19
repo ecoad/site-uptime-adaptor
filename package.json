@@ -20,5 +20,8 @@
     "optionalDependencies": {},
     "engines": {
         "node": "*"
+    },
+    "scripts": {
+        "test": "mocha"
     }
 }
