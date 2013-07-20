@@ -17,7 +17,6 @@ describe('siteAvailabilityJs', function() {
 
   describe('#getStatus', function() {
 
-/*
     it('returns a function', function() {
       siteAvailabilityJs.status(validConfig).getStatus.should.be.a('function');
     });
@@ -26,7 +25,7 @@ describe('siteAvailabilityJs', function() {
         done();
       });
     });
-*/
+
     it('returns a list of servers with their states', function(done) {
       siteAvailabilityJs.status(validConfig).getStatus(function(err, status) {
         var server, stringProperty, stringProperties = ['id', 'host', 'status', 'name'];
