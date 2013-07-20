@@ -1,29 +1,34 @@
 {
-    "author": "ecoad",
-    "name": "SiteUptimeJS",
-    "description": "Node JS adaptor for siteuptime.com API",
-    "version": "0.1.1",
-    "repository": {
-        "url": ""
-    },
-    "dependencies": {
-        "xml2js": "~0.2",
-        "q": ">= 0.9.1"
-    },
-    "devDependencies": {
-        "should": ">= 0.5.0",
-        "mocha": ">= 0.9.0",
-        "grunt": "v0.4.1",
-        "grunt-cli": "v0.1.6",
-        "grunt-contrib-jshint": "0.2.0",
-        "grunt-contrib-watch": "0.1.1",
-        "grunt-mocha-cli": "1.0.6"
-    },
-    "optionalDependencies": {},
-    "engines": {
-        "node": "*"
-    },
-    "scripts": {
-        "test": "export PATH=\"/usr/local/bin:$PATH\"; grunt"
-    }
+  "version": "0.1.1",
+  "name": "site-uptime-adaptor",
+  "description": "Node JS adaptor for siteuptime.com API",
+  "keywords": [
+    "siteuptime.com",
+    "site monitoring"
+  ],
+  "author": "ecoad",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ecoad/site-uptime-adaptor.git"
+  },
+  "main": "./index",
+  "dependencies": {
+    "xml2js": "~0.2",
+    "q": ">= 0.9.1"
+  },
+  "devDependencies": {
+    "should": ">= 0.5.0",
+    "mocha": ">= 0.9.0",
+    "grunt": "v0.4.1",
+    "grunt-cli": "v0.1.6",
+    "grunt-contrib-jshint": "0.2.0",
+    "grunt-contrib-watch": "0.1.1",
+    "grunt-mocha-cli": "1.0.6"
+  },
+  "engines": {
+    "node": ">= 0.10.6"
+  },
+  "scripts": {
+    "test": "export PATH=\"/usr/local/bin:$PATH\"; grunt"
+  }
 }
