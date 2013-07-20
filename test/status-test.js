@@ -17,18 +17,18 @@ describe('siteAvailabilityJs', function() {
 
   describe('#getStatus', function() {
 
+/*
     it('returns a function', function() {
       siteAvailabilityJs.status(validConfig).getStatus.should.be.a('function');
     });
-
     it('executes the callback on success', function(done) {
-      siteAvailabilityJs.status(validConfig).getStatus(function() {
+      siteAvailabilityJs.status(validConfig).getStatus(function(response) {
         done();
       });
     });
-
-    it('returns a list of servers with their states', function() {
-      siteAvailabilityJs.status(validConfig).getStatus(function(status) {
+*/
+    it('returns a list of servers with their states', function(done) {
+      siteAvailabilityJs.status(validConfig).getStatus(function(err, status) {
         var server, stringProperty, stringProperties = ['id', 'host', 'status', 'name'];
         for (var key in status) {
           server = status[key];
@@ -40,6 +40,7 @@ describe('siteAvailabilityJs', function() {
           }
         }
         status.should.be.a('object');
+        done();
       });
     });
 
