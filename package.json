@@ -14,6 +14,7 @@
         "should": ">= 0.5.0",
         "mocha": ">= 0.9.0",
         "grunt": "v0.4.1",
+        "grunt-cli": "v0.1.6",
         "grunt-contrib-jshint": "0.2.0",
         "grunt-contrib-watch": "0.1.1",
         "grunt-mocha-cli": "1.0.6"
