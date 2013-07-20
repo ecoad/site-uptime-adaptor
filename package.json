@@ -1,8 +1,8 @@
 {
     "author": "ecoad",
-    "name": "SiteUptimeJs",
-    "description": "Node JS Site Uptime adaptor",
-    "version": "0.0.1",
+    "name": "SiteUptimeJS",
+    "description": "Node JS adaptor for siteuptime.com API",
+    "version": "0.1",
     "repository": {
         "url": ""
     },
