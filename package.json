@@ -23,6 +23,6 @@
         "node": "*"
     },
     "scripts": {
-        "test": "grunt"
+        "test": "export PATH=\"/usr/local/bin:$PATH\"; grunt"
     }
 }
