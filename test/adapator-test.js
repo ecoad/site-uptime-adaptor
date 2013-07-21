@@ -1,6 +1,6 @@
 var assert = require('should')
+  , testBootstrap = require('./test-bootstrap')
   , adaptor = require('../lib/adaptor')
-  , validConfig = require('./test-config') // Generate this site uptime related file yourself
   ;
 
 describe('Adaptor', function() {
@@ -12,17 +12,8 @@ describe('Adaptor', function() {
       }, /Invalid input/);
     });
 
-    it('executes the callback on success', function(done) {
-      adaptor.getToken(validConfig.credentials, function(err, response) {
-        if (err) {
-          throw err;
-        }
-        done();
-      });
-    });
-
     it('returns a non-blank string on success', function(done) {
-      adaptor.getToken(validConfig.credentials, function(err, response) {
+      adaptor.getToken(testBootstrap.validCredentials, function(err, response) {
         if (err) {
           throw err;
         }
@@ -33,7 +24,7 @@ describe('Adaptor', function() {
     });
 
     it('return error callback on failure', function(done) {
-      adaptor.getToken({emailAddress: 'no', password: 'no'}, function(err, response) {
+      adaptor.getToken(testBootstrap.invalidCredentials, function(err, response) {
         if (err && err.message === 'WRONG_DATA') {
           done();
         }

@@ -1,7 +1,7 @@
 var assert = require('should')
+  , testBootstrap = require('./test-bootstrap')
   , siteAvailabilityJs = require('../')
   , adaptor = require('../lib/adaptor')
-  , validConfig = require('./test-config') // Generate this site uptime related file yourself
   ;
 
 describe('siteAvailabilityJs', function() {
@@ -13,7 +13,7 @@ describe('siteAvailabilityJs', function() {
     });
 
     it('returns a list of servers with their states', function(done) {
-      adaptor.getToken(validConfig.credentials, function(err, token) {
+      adaptor.getToken(testBootstrap.validCredentials, function(err, token) {
         if (err) throw err;
 
         siteAvailabilityJs.status.getStatus(token, function(err, status) {

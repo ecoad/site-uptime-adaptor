@@ -1,6 +1,6 @@
 var assert = require('should')
+  , testBootstrap = require('./test-bootstrap')
   , siteAvailabilityJs = require('../')
-  , validConfig = require('./test-config') // Generate this site uptime related file yourself
   , adaptor = require('../lib/adaptor') // Generate this site uptime related file yourself
   ;
 
@@ -14,12 +14,12 @@ describe('siteAvailabilityJs', function() {
 
     it('returns the uptime value for each day in the month', function(done) {
       var monitorRequest = {
-        monitorId: validConfig.servers.activeId,
+        monitorId: testBootstrap.validMonitorId,
         year: '2013',
         month: '06'
       };
 
-      adaptor.getToken(validConfig.credentials, function(tokenError, token) {
+      adaptor.getToken(testBootstrap.validCredentials, function(tokenError, token) {
         if (tokenError) throw tokenError;
 
         siteAvailabilityJs.uptime.getMonthly(token, monitorRequest, function(err, serverUptime) {
@@ -47,7 +47,7 @@ describe('siteAvailabilityJs', function() {
       });
     });
 
-    // Siteuptime create invalid XML - too difficult to test
+    // Invalid XML returned from siteuptime  - tricky test
     //
     // it('returns error on invalid server ID', function(done) {
     //   var monitorRequest = {
