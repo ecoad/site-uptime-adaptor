@@ -1,9 +1,7 @@
-site-uptime-adaptor
+site-uptime-adaptor [![Build Status](https://travis-ci.org/ecoad/site-uptime-adaptor.png)](https://travis-ci.org/ecoad/site-uptime-adaptor)
 ============
 
 siteuptime.com API wrapped in Node
-
-[![Build Status](https://travis-ci.org/ecoad/SiteUptimeJS.png)](https://travis-ci.org/ecoad/SiteUptimeJS)
 
 ## Examples
 ### Get session token
