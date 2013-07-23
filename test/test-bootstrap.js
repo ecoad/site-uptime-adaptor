@@ -50,5 +50,6 @@ nock('https://siteuptime.com:443')
 module.exports = {
   validCredentials: {emailAddress: 'valid@example.com', password: 'valid'},
   invalidCredentials: {emailAddress: 'no', password: 'no'},
-  validMonitorId: 1234
+  validMonitorId: 1234,
+  validUptime: {year: '2013', month: '06'}
 };
