@@ -26,7 +26,7 @@
     "nock": "~0.22"
   },
   "engines": {
-    "node": ">= 0.10.6"
+    "node": ">= 0.10.4"
   },
   "scripts": {
     "test": "export PATH=\"/usr/local/bin:$PATH\"; grunt"
