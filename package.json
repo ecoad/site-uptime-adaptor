@@ -1,5 +1,5 @@
 {
-  "version": "0.1.4",
+  "version": "0.1.5",
   "name": "site-uptime-adaptor",
   "description": "Node JS adaptor for siteuptime.com API",
   "keywords": [
