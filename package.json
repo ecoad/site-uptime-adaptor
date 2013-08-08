@@ -29,6 +29,6 @@
     "node": ">= 0.10.4"
   },
   "scripts": {
-    "test": "export PATH=\"/usr/local/bin:$PATH\"; grunt"
+    "test": "node_modules/mocha/bin/mocha --recursive -R xunit test/ > test-reports.xml"
   }
 }
